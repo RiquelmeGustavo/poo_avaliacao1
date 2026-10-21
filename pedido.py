@@ -29,17 +29,16 @@ class Pedido:
     Recebe o cupom já padronizado e retorna o valor do desconto.
     """
     if cupom == "sim":
-      desconto = 0.10
+      desconto = subtotal * 0.10
     elif cupom == "não":
       desconto = 0
-    self.valor_descontado = subtotal * desconto
-    return self.valor_descontado
+    return self.desconto
   
-  def calcular_total(self, subtotal, valor_descontado):
+  def calcular_total(self, subtotal, desconto):
     """
     Retorna o valor total do pedido, com ou sem desconto.
     """
-    return subtotal - valor_descontado
+    return subtotal - desconto
 
   def exibir_resumo(self):
     """
