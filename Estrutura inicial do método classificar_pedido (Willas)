@@ -1,0 +1,4 @@
+def classificar_pedido(self, subtotal):
+    """
+    Classifica o pedido pelo preço (pequeno, médio e grande).
+    """
