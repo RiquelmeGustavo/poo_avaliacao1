@@ -47,4 +47,7 @@ class Pedido:
     print(f"Produto: {self.produto}")
     print(f"Quantidade: {self.qtd}")
     print(f"Preço unitário: R$ {self.preco_unitario:.2f}")
-    
+    print(f"Subtotal: R$ {self.calcular_subtotal(self.qtd, self.preco_unitario):.2f}")
+    print(f"Desconto: R$ {self.calcular_desconto(self.subtotal, self.cupom):.2f}")
+    print(f"Total: R$ {self.calcular_total(self.subtotal, self.desconto):.2f}")
+    print(f"Classificação: {self.classificar_pedido(self.subtotal)}")
