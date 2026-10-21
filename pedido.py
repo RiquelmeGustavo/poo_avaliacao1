@@ -37,3 +37,14 @@ class Pedido:
     Retorna o valor total do pedido, com ou sem desconto.
     """
     return subtotal - valor_descontado
+
+  def exibir_resumo(self):
+    """
+    Exibe um resumo com as informações do pedido.
+    """
+    print(f"Resumo do Pedido\n")
+    print(f"Cliente: {self.nome}")
+    print(f"Produto: {self.produto}")
+    print(f"Quantidade: {self.qtd}")
+    print(f"Preço unitário: R$ {self.preco_unitario:.2f}")
+    
