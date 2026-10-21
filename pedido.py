@@ -16,3 +16,9 @@ def classificar_pedido(self, subtotal):
     """
     Classifica o pedido pelo preço (pequeno, médio e grande).
     """
+if subtotal <= 30:
+      return "Pedido pequeno"
+    elif 30 < subtotal <= 100:
+      return "Pedido médio"
+    else:
+      return "Pedido grande"
