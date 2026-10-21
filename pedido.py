@@ -12,3 +12,7 @@ class Pedido:
     """
     self.subtotal = qtd * preco_unitario
     return self.subtotal
+def classificar_pedido(self, subtotal):
+    """
+    Classifica o pedido pelo preço (pequeno, médio e grande).
+    """
