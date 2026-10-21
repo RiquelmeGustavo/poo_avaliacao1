@@ -12,6 +12,7 @@ class Pedido:
     """
     self.subtotal = qtd * preco_unitario
     return self.subtotal
+  
   def classificar_pedido(self, subtotal):
     """
     Classifica o pedido pelo preço (pequeno, médio e grande).
@@ -22,6 +23,7 @@ class Pedido:
       return "Pedido médio"
     else:
       return "Pedido grande"
+  
   def calcular_desconto(self, subtotal, cupom):
     """
     Recebe o cupom já padronizado e retorna o valor do desconto.
@@ -32,6 +34,7 @@ class Pedido:
       desconto = 0
     self.valor_descontado = subtotal * desconto
     return self.valor_descontado
+  
   def calcular_total(self, subtotal, valor_descontado):
     """
     Retorna o valor total do pedido, com ou sem desconto.
@@ -51,3 +54,6 @@ class Pedido:
     print(f"Desconto: R$ {self.calcular_desconto(self.subtotal, self.cupom):.2f}")
     print(f"Total: R$ {self.calcular_total(self.subtotal, self.desconto):.2f}")
     print(f"Classificação: {self.classificar_pedido(self.subtotal)}")
+
+p1 = Pedido("Felipe", "Hambúrguer", 3, 25.0, "SIM")
+p1.exibir_resumo()
