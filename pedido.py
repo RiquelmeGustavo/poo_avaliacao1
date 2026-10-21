@@ -32,3 +32,8 @@ class Pedido:
       desconto = 0
     self.valor_descontado = subtotal * desconto
     return self.valor_descontado
+  def calcular_total(self, subtotal, valor_descontado):
+    """
+    Retorna o valor total do pedido, com ou sem desconto.
+    """
+    return subtotal - valor_descontado
